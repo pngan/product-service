@@ -8,8 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Description extends Model
 {
     use HasFactory;
-    public funciton product()
+    public function product()
     {
         $this->belongsTo(Product::class);
+    }
+
+    public function scopeOfProduct($query, $productId)
+    {
+        return $query->where('product_id', $productId);
     }
 }

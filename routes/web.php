@@ -24,9 +24,7 @@ Route::group(['prefix' => 'api'], function() {
 //      return App\Models\Product::all();
 // }]);
      Route::resource('products', ProductController::class)
-        ->only(['index', 'show', 'update'
-    ]);
+        ->only(['index', 'store', 'update' ]);
     Route::resource('products.descriptions', ProductDescriptionController::class)
-        ->only(['index', 'show'
-    ]);
+        ->only(['index', 'show' ]);
 });

@@ -18,7 +18,7 @@ class ExampleTest extends TestCase
 
     public function testProductsList()
     {
-        $this->get(route('api.products'))
+        $this->get(route('api.products.index'))
             ->assertResponseOk();
     }
 }
